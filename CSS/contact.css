@@ -1,0 +1,252 @@
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact .section-subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: var(--main-font-family);
+}
+
+.contact h2 {
+  font-family: var(--head-font-family);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.contact h2 span {
+  color: var(--primary-color);
+}
+
+.contact .map {
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-info .info-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info .info-box i {
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: var(--main-font-family);
+}
+
+.contact-form .btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: #e61414;
+}
+
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact .section-subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: var(--main-font-family);
+}
+
+.contact h2 {
+  font-family: var(--head-font-family);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.contact h2 span {
+  color: var(--primary-color);
+}
+
+.contact .map {
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-info .info-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-info .info-box i {
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 5px;
+  font-family: var(--main-font-family);
+}
+
+.contact-info .info-box p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  font-family: var(--main-font-family);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: var(--main-font-family);
+}
+
+.contact-form .btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: #e61414;
+}
+
+@media (min-width: 1024px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact-form .form-group {
+    flex-direction: row;
+  }
+
+  .contact-form .form-group input {
+    width: 50%;
+  }
+}
+
+.back-home-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px 0px 0px 10px;
+  font-family: var(--main-font-family);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  z-index: 9999;
+}
+
+.back-home-btn:hover {
+  background-color: #e64a19;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.back-home-btn i {
+  font-size: 18px;
+}

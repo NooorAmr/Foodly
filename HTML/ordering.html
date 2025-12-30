@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/ordering.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Linking Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <!-- Linking FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <h1 class="title">Choose Your Meal</h1>
+
+
+    <div class="cards-container">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <img src="../images/fried-chicken-with-tomato-slices-onions.jpg" alt="">
+            <h3>Kabab</h3>
+            <p class="price" data-price="80">80 EGP</p>
+            <button class="add-btn" data-name="Burger" data-price="80">Add</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="../images/meal-1.jpg" alt="">
+            <h3>Pizza</h3>
+            <p class="price" data-price="120">120 EGP</p>
+            <button class="add-btn" data-name="Pizza" data-price="120">Add</button>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <img src="../images/meal-2.jpg" alt="">
+            <h3>Beef</h3>
+            <p class="price" data-price="70">70 EGP</p>
+            <button class="add-btn" data-name="Pasta" data-price="70">Add</button>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <img src="../images/meal-3.jpg" alt="">
+            <h3>Burger</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 5 -->
+        <div class="card">
+            <img src="../images/meal-4.jpg" alt="">
+            <h3>Special Pizza</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 6 -->
+        <div class="card">
+            <img src="../images/meal-5.jpg" alt="">
+            <h3>Fried Chicken</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 7 -->
+        <div class="card">
+            <img src="../images/meal-6.jpg" alt="">
+            <h3>Kofta</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 8 -->
+        <div class="card">
+            <img src="../images/meal-7.jpg" alt="">
+            <h3>Pizza with Crunshes</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 9 -->
+        <div class="card">
+            <img src="../images/alexandru-stavrica.jpg" alt="">
+            <h3>Bread</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+        <!-- CARD 10 -->
+        <div class="card">
+            <img src="../images/top-view-banquet-with-lots-food.jpg" alt="">
+            <h3>Whole Big Meal</h3>
+            <p class="price" data-price="30">30 EGP</p>
+            <button class="add-btn" data-name="Fries" data-price="30">Add</button>
+        </div>
+
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-box">
+        <h2>Your Order</h2>
+        <div id="order-list"></div>
+        <hr>
+        <p class="total">Total: <span id="total-price">0</span> EGP</p>
+        
+        <a href="../index.php" class="exit">Submit</a>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="footer-col">
+            <picture>
+                <img class="logo" src="../images/favicon.png" alt="our icon">
+            </picture>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="HTML/menu.html">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-col">
+            <h3>Get in Touch</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Street, City</p>
+                <p><i class="fas fa-phone"></i> +123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+            </div>
+        </div>
+
+
+        <div class="footer-col newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter to get the latest updates.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <section>
+        <a href="../index.php" class="back-home-btn">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+    </section>
+
+
+
+    <script src="../JS/ordering.js"></script>
+</body>
+
+</html>

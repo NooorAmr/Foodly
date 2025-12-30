@@ -1,0 +1,356 @@
+:root {
+  --main-font-family: "Open Sans", sans-serif;
+  --h2-font-family: "Inter", sans-serif;
+  --head-font-family: "Amatic SC", sans-serif;
+  --primary-color: #ff5722;
+  --primary-font-size: 30px;
+  --primary-font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../images/girl-wants-share-her-piece-cake-with-loved-one-romantic-silly-cute-girlfriend-brink-piece-dessert.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 60px;
+  font-family: "Amatic SC", cursive;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.btn-primary {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #e64a19;
+}
+
+/* Our Story */
+.story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+.story-image {
+  flex: 1;
+}
+.story-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.story-text h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  font-family: "Amatic SC", sans-serif;
+}
+.story-text {
+  flex: 1;
+}
+.story-text p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Values Section */
+.wrapper {
+  background-color: #eeeeee;
+}
+.values h2 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 50px;
+  color: #ff5722;
+  font-family: "Amatic SC", sans-serif;
+}
+.values-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.card {
+  background-color: #fff4f0;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card i {
+  font-size: 40px;
+  color: #ff5722;
+  margin-bottom: 20px;
+}
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+  .story {
+    flex-direction: column;
+  }
+}
+
+/* Stats */
+.stats {
+  width: 100%;
+  text-align: center;
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.stats-title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #ff6f00;
+  font-family: "Amatic SC", sans-serif;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.stat-box {
+  background: #ff6f00;
+  padding: 60px 45px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 45px;
+  color: black;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Chefs Section */
+.chefs {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.chefs h2 {
+  font-family: var(--head-font-family);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.chefs h2 span {
+  color: var(--primary-color);
+}
+
+.chefs-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chef-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  position: relative;
+}
+
+.chef-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.chef-img img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.chef-img::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url("../images/team-shape.svg") bottom center no-repeat;
+  background-size: cover;
+}
+
+.social-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: right 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.social-icons a {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 5px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.chef-card:hover .chef-img img {
+  transform: scale(1.1);
+}
+
+.chef-card:hover .social-icons {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chef-info {
+  padding: 20px;
+}
+
+.chef-info h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.chef-info span {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.chef-info p {
+  font-size: 15px;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .chefs-cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .chef-card {
+    flex: 1;
+    max-width: 30%;
+  }
+}
+
+/* Video Section */
+section.videoAboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.back-home-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px 0px 0px 10px;
+  font-family: var(--main-font-family);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  z-index: 9999;
+}
+.back-home-btn:hover {
+  background-color: #e64a19;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.back-home-btn i {
+  font-size: 18px;
+}

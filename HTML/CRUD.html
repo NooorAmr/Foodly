@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Plates</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/CRUD.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1 class="display-4 fw-bold">Management System</h1>
+        <p class="fs-5">Efficiently manage your product inventory</p>
+    </header>
+    <main>
+        <section>
+            <div class="container my-4 shadow py-4 px-0">
+                <div class="section-title d-flex align-items-center text-primary border-3 border-bottom px-2 pb-2">
+                    <i class="fas fa-plus-circle me-2 fa-2x"></i>
+                    <h2>Add New Plate</h2>
+                </div>
+                <form>
+                    <div class="container mt-4 px-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text"
+                                        class="form-control py-4 pt-5 border-bottom border-primary border-3 rounded-0"
+                                        id="productName" placeholder="productName">
+                                    <label for="productName">
+                                        <i class="fas fa-tag"></i>
+                                        Plate Name
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number"
+                                        class="form-control py-4 pt-5 border-bottom border-primary border-3 rounded-0"
+                                        id="productPrice" placeholder="productPrice">
+                                    <label for="productPrice">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        Plate Price
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input list="productCat"
+                                        class="form-control py-4 pt-5 border-bottom border-primary border-3 rounded-0"
+                                        id="productCategory" placeholder="productCategory">
+                                    <datalist id="productCat">
+                                        <option value="Beef">
+                                        <option value="SeaFood">
+                                        <option value="Chicken">
+                                    </datalist>
+                                    <label for="productCategory">
+                                        <i class="fa-solid fa-border-all"></i>
+                                        Plate Category
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="file"
+                                        class="form-control py-4 pt-5 border-bottom border-primary border-3 rounded-0"
+                                        id="productImage" placeholder="productImage">
+                                    <label for="productImage">
+                                        <i class="fas fa-image"></i>
+                                        Plate Image
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <textarea
+                                        class="form-control py-4 pt-5 border-bottom border-primary border-3 rounded-0"
+                                        id="productDescription" placeholder="productDescription"></textarea>
+                                    <label for="productDescription">
+                                        <i class="fas fa-credit-card"></i>
+                                        Plate Description
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-5">
+                                <button type="button" id="addBtn" onclick="addProduct()" class="btn btn-primary">Add
+                                    Plate</button>
+                                <button type="button" id="updBtn" onclick="updateProduct()"
+                                    class="btn btn-warning d-none">Update
+                                    Plate</button>
+                                <input type="text" oninput="searchProduct()" id="productSearch"
+                                    class="form-control border border-3 border-black border-opacity-50 w-50"
+                                    placeholder="Search Product By Name...">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="section-title d-flex align-items-center justify-content-between">
+
+                    <h2 class="m-0">
+                        <i class="fa-solid fa-grip me-2"></i>
+                        Plates Inventory
+                    </h2>
+                    <span class="badge text-bg-primary p-3 fs-5">Plates</span>
+
+                </div>
+                <div id="rowData" class="row mt-5 gy-4">
+                    <!-- <div class="col-md-4">
+                        <div class="card position-relative">
+                            <img src="./Images/iphone17.webp" class="card-img-top" alt="iphone17">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary p-2 position-absolute top-0 end-0 m-2 fs-6">Mobile</span>
+                                <h3 class="card-title">iPhone 17 Pro Max</h3>
+                                <p class="card-text">Latest iPhone with advanced features and improved camera system.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="text-primary">20,000 EGP</h3>
+                                    <div class="d-flex">
+                                        <button id="deleteProduct" class="btn btn-outline-danger rounded-end-0">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button id="updateProduct" class="btn btn-outline-warning rounded-start-0">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section>
+        <a href="../index.php" class="back-home-btn">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+    </section>
+
+
+
+    <script src="../JS/CRUD.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
